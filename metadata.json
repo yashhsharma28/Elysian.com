@@ -1,0 +1,6 @@
+{
+  "name": "ELYSIAN — Luxury Perfumes & Fragrances",
+  "description": "Crafted for the Extraordinary. Premium Indian luxury fragrances priced under ₹1000.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

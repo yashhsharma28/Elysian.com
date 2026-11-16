@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .font-cormorant {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+  .font-playfair {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  .font-manrope {
+    font-family: 'Manrope', sans-serif;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F1EA;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C8A24A;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B08B35;
+}
+
+/* Global Smooth Button Hover, Color Transition & 105% Scaling Effects */
+button {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              color 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+/* Glassmorphism & Gold Glow Effects */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(232, 226, 215, 0.85);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #A8822A 0%, #D8B36A 50%, #A8822A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #C8A24A 0%, #D8B36A 100%);
+}
+
+.gold-glow-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gold-glow-hover:hover {
+  box-shadow: 0 10px 30px -5px rgba(200, 162, 74, 0.35);
+  border-color: rgba(200, 162, 74, 0.8);
+}
+
+/* Image Zoom & Smooth Aspect Containers */
+.img-zoom-hover {
+  overflow: hidden;
+}
+
+.img-zoom-hover img {
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-zoom-hover:hover img {
+  transform: scale(1.08);
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
